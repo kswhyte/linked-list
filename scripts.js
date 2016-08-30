@@ -10,17 +10,17 @@ function createSiteLink(title, url) {
   totalLinks();
 }
 
-function addToLinkList(siteLink) {
-  $('.linked-list').append(siteLink);
-}
-
-totalLinks()
-
-$('#title-input').on('keyup', function() {
-  if ($('#title-input').val() !== ''){
-    $('#add-link-button').prop('disabled', false);
-  } else {
-    $('#add-link-button').prop('disabled', true);
-  }
-})
+// function addToLinkList(siteLink) {
+//   $('.linked-list').append(siteLink);
+// }
+//
+// totalLinks()
+//
+// $('#title-input').on('keyup', function() {
+//   if ($('#title-input').val() !== ''){
+//     $('#add-link-button').prop('disabled', false);
+//   } else {
+//     $('#add-link-button').prop('disabled', true);
+//   }
+// })
 // && $('#url-input').val() !== ''
