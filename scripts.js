@@ -20,13 +20,13 @@ function createSiteLink(url) {
   var titleInput = $('#title-input').val();
   // var urlInput = $('#url-input').val();
   var siteLink = '<li><a href="'+url+'">'+titleInput+'</a><button class="remove-link">x</button><button class="mark-as-read">Mark as Read</li>'
-  debugger;
   addToLinkList(siteLink);
   totalLinks();
 }
 
 function addToLinkList(siteLink) {
   $('.linked-list').append(siteLink);
+  clearFields();
 }
 
 function totalLinks() {
@@ -42,3 +42,9 @@ $('#title-input').on('keyup', function() {
   }
 });
 // && $('#url-input').val() !== ''
+
+function clearFields() {
+  $('#url-input').val('');
+  $('#title-input').val('');
+  $('#add-link-button').prop('disabled', true);
+}
