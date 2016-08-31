@@ -74,9 +74,10 @@ function countTotals() {
   $('.total-unread').text($('.new-url-link').length - $('.read').length);
 }
 
-$('.count-totals').on('click', '#clear-read-links-button', function() {
+$('#clear-read-links-button').on('click', function() {
   $('.read').remove();
   countTotals();
+  $('#clear-read-links-button').prop('disabled', true);
 });
 
 function clearReadButtonToggle() {
@@ -86,6 +87,9 @@ function clearReadButtonToggle() {
     $('#clear-read-links-button').prop('disabled', true);
   }
 }
+
+
+
 
 // } else if ($('.read').length === 0) {
 //   $('#clear-read-links-button').prop('disabled', true);
