@@ -2,6 +2,13 @@ $('#add-link-button').on('click', function() {
   var urlInput = $('#url-input').val();
   isUrlValid(urlInput);
 });
+//
+// $('#add-link-button').on('click', function() {
+//   var urlInput = $('#url-input').val();
+//   isUrlValid(urlInput);
+// });
+
+
 
 function isUrlValid(urlInput) {
   var urlCheck = urlInput.match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g);
@@ -48,3 +55,7 @@ function clearFields() {
   $('#title-input').val('');
   $('#add-link-button').prop('disabled', true);
 }
+
+$('.linked-list').on('click', '.remove-link', function() {
+  $('.remove-link').parent().remove();
+});
