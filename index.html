@@ -8,11 +8,12 @@
     <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
   </head>
   <body>
-    <section class="container">
+    <section class="title-container">
       <header>
         <h1>My Favorite Links</h1>
         <h3>add your favorite links</h3>
       </header>
+    </section>
 
       <article class="add-link-form">
         <input id="title-input" type="text" placeholder="Link Title...">
@@ -22,7 +23,32 @@
 
       <article class="linked-list">
       </article>
+
+    <section class="count-totals">
+      <article>
+        <h3>Total Links:</h3>
+        <p class="total-links">
+        </p>
+      </article>
+
+      <article>
+        <h3>Links Read:</h3>
+        <p class="total-read">
+        </p>
+      </article>
+
+      <article>
+        <h3>Links Unread:</h3>
+        <p class="total-unread">
+        </p>
+      </article>
+
+      <button id="clear-read-links-button" type="button" disabled>Clear <span>Read</span> Links</button>
     </section>
+
+
+
+      </article>
   <script src="jquery.js"></script>
   <script src="scripts.js"></script>
   </body>

@@ -2,7 +2,7 @@ body {
   font-family: 'Orbitron', sans-serif;
 }
 
-.container {
+/*.title-container {
   margin: auto;
   margin-top: 100px;
   height: 300px;
@@ -58,7 +58,6 @@ body {
     background-color: red;
     border: none;
     color: white;
-    padding 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -71,6 +70,7 @@ body {
     cursor: pointer;
     box-shadow: 0 4px #999;
     font-family: 'Orbitron', sans-serif;
+    margin-top: 75px;
   }
 
   #add-link-button:hover {
@@ -81,4 +81,12 @@ body {
     background-color: gray;
     box-shadow: 0 5px #666;
     transform: translateY(2px);
+  }*/
+
+  .count-totals {
+    margin: 70px;
+  }
+
+  span {
+    font-style: italic;
   }
