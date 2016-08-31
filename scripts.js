@@ -42,13 +42,20 @@ function totalLinks() {
 }
 
 $('#title-input').on('keyup', function() {
-  if ($('#title-input').val() !== ''){
+  buttonToggle();
+});
+
+$('#url-input').on('keyup', function() {
+  buttonToggle();
+});
+
+function buttonToggle () {
+  if ($('#url-input').val() !== '' && $('#title-input').val() !== ''){
     $('#add-link-button').prop('disabled', false);
   } else {
     $('#add-link-button').prop('disabled', true);
   }
-});
-// && $('#url-input').val() !== ''
+}
 
 function clearFields() {
   $('#url-input').val('');
