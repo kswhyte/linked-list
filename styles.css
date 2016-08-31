@@ -1,3 +1,7 @@
+body {
+  font-family: 'Orbitron', sans-serif;
+}
+
 .container {
   margin: auto;
   margin-top: 100px;
@@ -8,18 +12,32 @@
   border: 1px solid black;
 }
 
+  header {
+    background-color: gray;
+    margin-top: -10px;
+    width: auto;
+    height: 60px;
+    border-bottom: 1px solid black;
+  }
+
   h1  {
-    width: 100px;
+    width: 150px;
     height: 20px;
-    margin: auto;
+    text-align: center;
+    margin-left: 30px;
+    margin-top: 10px;
     padding-top: 10px;
+    text-align: left;
+    color: white;
 
   }
 
   h3 {
-    width: 150px;
-    height: 20px;
-    margin: auto;
+    width: 200px;
+    height: 25px;
+    margin-left: 30px;
+    padding-top: 5px;
+    color: white;
   }
 
   .add-link-form {
@@ -29,11 +47,11 @@
   }
 
   #title-input {
-    margin: 2px 2px 10px 15px;
+    margin: 10px 2px 10px 12px;
   }
 
   #url-input {
-    margin: 2px 15px 10px 2px;
+    margin: 10px 12px 10px 2px;
   }
 
   #add-link-button {
@@ -44,17 +62,19 @@
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
-    height: 50px;
-    width: 100px;
-    margin-left: 100px;
-    border-radius: 9px;
+    font-size: 12px;
+    height: 30px;
+    width: 80px;
+    margin-left: 105px;
+    border-radius: 2px;
+    border: 1px solid black;
     cursor: pointer;
     box-shadow: 0 4px #999;
+    font-family: 'Orbitron', sans-serif;
   }
 
   #add-link-button:hover {
-    background-color: maroon;
+    background-color: darkred;
   }
 
   #add-link-button:active {
