@@ -77,3 +77,13 @@ $('.linked-list').on('click', '.mark-as-read', function() {
   //   $('.linked-list li a').addClass('read');
   // }
 });
+
+// function totalReadLinks() {
+//   var totalRead = 0;
+//   total++;
+// }
+//
+// function totalUnreadLinks() {
+//   var totalUnread = 0;
+//   total++;
+// }
