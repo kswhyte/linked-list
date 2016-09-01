@@ -223,9 +223,28 @@ _____________
 }
 
 #clear-read-links-button {
+  background-color: slategray;
+  border: none;
+  color: black;
+  text-decoration: none;
+  height: 20px;
+  width: 110px;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 2px black;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 10px;
   display: block;
+  position: center;
   margin: auto;
   margin-bottom: 10px;
+}
+
+#clear-read-links-button:disabled {
+    cursor: not-allowed;
+    color: lightgray;
+    background: grey;
+
 }
 
 span {
