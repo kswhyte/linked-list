@@ -39,6 +39,7 @@ function createSiteLink(urlInput) {
   var titleInput = $('#title-input').val();
   var siteLink = '<li><a class="new-url-link" href="'+urlInput+'">'+titleInput+'</a><button class="remove-link">x</button><button class="mark-as-read">Mark as Read</li>'
   addToLinkList(siteLink);
+  $('#title-input').focus();
 }
 
 function addToLinkList(siteLink) {
