@@ -1,92 +1,193 @@
+
 body {
   font-family: 'Orbitron', sans-serif;
+  height: 600px;
+  background: url('images/charcoal-backdrop.jpg') no-repeat center center fixed;
 }
 
-/*.title-container {
+.title-container {
   margin: auto;
-  margin-top: 100px;
-  height: 300px;
-  width: 300px;
+  border-radius: 25%;
+  margin-top: 40px;
+  height: auto;
+  width: 380px;
   position: center;
   background: white;
   border: 1px solid black;
+  opacity: 0.8;
+  background-image: linear-gradient(white, black );
+
+
+}
+/*
+header {
+  background-color: gray;
+  width: auto;
+  height: 60px;
+  border-bottom: 1px solid black;
+}*/
+
+h1  {
+  height: 60px;
+  text-align: center;
+  padding: 25px;
+  color: black;
+  font-size: 2em;
 }
 
-  header {
-    background-color: gray;
-    margin-top: -10px;
-    width: auto;
-    height: 60px;
-    border-bottom: 1px solid black;
-  }
+img {
+  width: 30px;
+  height: 30px;
+}
 
-  h1  {
-    width: 150px;
-    height: 20px;
-    text-align: center;
-    margin-left: 30px;
-    margin-top: 10px;
-    padding-top: 10px;
-    text-align: left;
-    color: white;
 
-  }
+#add-link-button {
+  background-color: darkred;
+  /*background-image: linear-gradient(darkred 80%, grey);*/
+  border: none;
+  color: white;
+  text-decoration: none;
+  /*display: inline-block;*/
+  height: 25px;
+  width: 75px;
+  border-radius: 2px;
+  /*border: 1px solid black;*/
+  cursor: pointer;
+  box-shadow: 0 2px black;
+  font-family: 'Orbitron', sans-serif;
+  display: block;
+  position: center;
+  margin: auto;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
 
-  h3 {
-    width: 200px;
-    height: 25px;
-    margin-left: 30px;
-    padding-top: 5px;
-    color: white;
-  }
+#add-link-button:hover {
+  padding: 5px;
+  background-color: black;
+}
 
-  .add-link-form {
-    width: auto;
-    height: 50px;
-    margin: auto;
-  }
+#add-link-button:disabled {
+  cursor: not-allowed;
+  color: lightgray;
+  background: grey;
+}
 
-  #title-input {
-    margin: 10px 2px 10px 12px;
-  }
+#add-link-button:active {
+  background-color: gray;
+  box-shadow: 0 0px #666;
+  transform: translateY(2px);
+}
 
-  #url-input {
-    margin: 10px 12px 10px 2px;
-  }
+.linked-list li {
+  text-decoration: none;
+  margin-left: 20px;
+  list-style-type: none;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*margin-top: 30px;*/
+}
 
-  #add-link-button {
-    background-color: red;
-    border: none;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 12px;
-    height: 30px;
-    width: 80px;
-    margin-left: 105px;
-    border-radius: 2px;
-    border: 1px solid black;
-    cursor: pointer;
-    box-shadow: 0 4px #999;
-    font-family: 'Orbitron', sans-serif;
-    margin-top: 75px;
-  }
+.linked-list li a {
+  text-decoration: none;
+  color: black;
+  padding-right: 10px;
+  /*padding-top: 10px;*/
+}
 
-  #add-link-button:hover {
-    background-color: darkred;
-  }
+.linked-list button {
+  background: white;
+  /*size: 2em;*/
+}
 
-  #add-link-button:active {
-    background-color: gray;
-    box-shadow: 0 5px #666;
-    transform: translateY(2px);
-  }*/
+h3, p {
+  /*display: inline-block;*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  .count-totals {
-    margin: 70px;
-  }
+h3 {
+  width: 200px;
+  height: 25px;
+  margin-left: 30px;
+  padding-top: 5px;
+  color: black;
+  margin: auto;
+  position: center;
+  width: 125px;
+  display: flex;
+  align-items: center;
+  /*margin: 50px 0 20px 10px;*/
 
-  span {
-    font-style: italic;
-  }
+}
+
+p {
+  color: red;
+  margin: auto;
+  position: center;
+  width: 125px;
+  display: flex;
+  align-items: center;
+}
+
+_______________
+#linked-list button {
+  background-color: darkred;
+  /*background-image: linear-gradient(darkred 80%, grey);*/
+  border: none;
+  color: white;
+  text-decoration: none;
+  /*display: inline-block;*/
+  height: 25px;
+  width: 75px;
+  border-radius: 2px;
+  /*border: 1px solid black;*/
+  cursor: pointer;
+  box-shadow: 0 2px black;
+  font-family: 'Orbitron', sans-serif;
+  display: block;
+  position: center;
+  margin: auto;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+#linked-list button:hover {
+  padding: 5px;
+  background-color: black;
+}
+
+#linked-list button:disabled {
+  cursor: not-allowed;
+  color: lightgray;
+  background: grey;
+}
+
+#linked-list button:active {
+  background-color: gray;
+  box-shadow: 0 0px #666;
+  transform: translateY(2px);
+}
+_____________
+.count-totals {
+  position: center;
+  margin-left: auto;
+  margin-top: 20px;
+
+}
+
+#clear-read-links-button {
+
+  /*margin: 20px 0;
+  /*padding: 20px;*/*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+span {
+  font-style: italic;
+}

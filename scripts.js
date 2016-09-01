@@ -1,14 +1,26 @@
 $('#add-link-button').on('click', function() {
   var urlInput = $('#url-input').val();
+  verifyFullInput(urlInput);
   isUrlValid(urlInput);
 });
 
 $('#url-input').keypress(function(event) {
   if (event.which == 13) {
     var urlInput = $('#url-input').val();
+    verifyFullInput(urlInput);
     isUrlValid(urlInput);
   }
 });
+
+function verifyFullInput(urlInput) {
+  var titleInput = $('#title-input').val();
+  if (urlInput && titleInput === '') {
+    alert('You have not entered a URL. Please, specifiy a valid URL.');
+  } else if (urlInput === '' && titleInput) {
+    alert('You have not entered a site title. Please, specifiy a title for your link.');
+  }
+  return;
+}
 
 function isUrlValid(urlInput) {
   var urlCheck = urlInput.match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g);
@@ -23,9 +35,9 @@ function invalidUrlErrorMessage() {
   alert("That URL is invalid. Please choose a valid URL.");
 }
 
-function createSiteLink(url) {
+function createSiteLink(urlInput) {
   var titleInput = $('#title-input').val();
-  var siteLink = '<li><a class="new-url-link" href="'+url+'">'+titleInput+'</a><button class="remove-link">x</button><button class="mark-as-read">Mark as Read</li>'
+  var siteLink = '<li><a class="new-url-link" href="'+urlInput+'">'+titleInput+'</a><button class="remove-link">x</button><button class="mark-as-read">Mark as Read</li>'
   addToLinkList(siteLink);
 }
 
@@ -87,9 +99,3 @@ function clearReadButtonToggle() {
     $('#clear-read-links-button').prop('disabled', true);
   }
 }
-
-
-
-
-// } else if ($('.read').length === 0) {
-//   $('#clear-read-links-button').prop('disabled', true);
