@@ -8,10 +8,10 @@ body {
   position: center;
   border-radius: 10%;
   margin-top: 30px;
-  height: auto;
-  width: 600px;
+  max-width: 600px;
   opacity: 0.8;
   background-image: linear-gradient(white, black 65%);
+  padding-bottom: 20px;
 }
 
 h1  {
@@ -98,10 +98,7 @@ hr {
 ______________________________
 
 .count-totals {
-  position: center;
   margin-left: auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
 }
 
 #total-links {
@@ -192,26 +189,30 @@ ________________________________
 __________________________________
 
 .clear-read-links {
-  text-align:center;
-  padding: 20px 0;
-  margin-bottom: 20px;
+  display: flex;
+  flex-direction: flex-column;
+  justify-content: center;
+  /*-ms-align-items: ;
+  align-items: ;*/
 }
 
 #clear-read-links-button {
   background-color: darkred;
   border: none;
-  text-decoration: none;
+  /*text-decoration: none;*/
   font-family: 'Orbitron', sans-serif;
   color: white;
   padding: 8px 8px 4px 8px;
   border-radius: 2px;
-  cursor: pointer;
   box-shadow: 0 2px black;
   display: block;
-  position: center;
+  /*position: center;*/
   margin: auto;
-  margin-bottom: 25px;
-  margin-top: 25px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  /*margin: 30px auto;*/
+  /*margin-bottom: 25px;
+  margin-top: 25px;*/*/
 }
 
 #clear-read-links-button:disabled {
