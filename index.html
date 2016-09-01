@@ -10,21 +10,20 @@
   <body>
     <section class="title-container">
       <header>
-        <h1>B<img src="http://vignette3.wikia.nocookie.net/clubpenguin/images/9/9a/Smoothie_Smash_Bomb.gif/revision/latest?cb=20120909225634">mb Links</h1>
+        <h1>B<img id="bomb-image" src="http://vignette3.wikia.nocookie.net/clubpenguin/images/9/9a/Smoothie_Smash_Bomb.gif/revision/latest?cb=20120909225634">mb Links</h1>
       </header>
-
 
       <article class="add-link-form">
         <input id="title-input" type="text" placeholder="Add Link Title...">
         <input id="url-input" type="text" placeholder="http://">
         <button id="add-link-button" type="button" disabled>Add Link</button>
       </article>
-
+    <hr>
       <article class="linked-list">
       </article>
-
+    <hr>
       <section class="count-totals">
-        <article>
+        <article id="total-links">
           <h3>Total Links</h3>
           <p class="total-links">
           </p>
@@ -41,7 +40,8 @@
           <p class="total-unread">
           </p>
         </article>
-
+      </section>
+      <section class ="clear-read-links">
         <button id="clear-read-links-button" type="button" disabled>Clear <span>Read</span> Links</button>
       </section>
     </section>

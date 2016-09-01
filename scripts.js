@@ -19,7 +19,7 @@ function verifyFullInput(urlInput) {
   } else if (urlInput === '' && titleInput) {
     alert('You have not entered a site title. Please, specifiy a title for your link.');
   }
-  return;
+  // return;
 }
 
 function isUrlValid(urlInput) {
@@ -37,7 +37,7 @@ function invalidUrlErrorMessage() {
 
 function createSiteLink(urlInput) {
   var titleInput = $('#title-input').val();
-  var siteLink = '<li><a class="new-url-link" href="'+urlInput+'">'+titleInput+'</a><button class="remove-link">x</button><button class="mark-as-read">Mark as Read</li>'
+  var siteLink = '<li><a class="new-url-link" href="'+urlInput+'">'+titleInput+'</a><button class="mark-as-read-button">Mark as Read</button><button class="remove-link-button""mark-as-read-button">X</li>'
   addToLinkList(siteLink);
   $('#title-input').focus();
 }
@@ -70,12 +70,12 @@ function clearFields() {
   $('#add-link-button').prop('disabled', true);
 }
 
-$('.linked-list').on('click', '.remove-link', function() {
+$('.linked-list').on('click', '.remove-link-button', function() {
   $(this).parent().remove();
   countTotals();
 });
 
-$('.linked-list').on('click', '.mark-as-read', function() {
+$('.linked-list').on('click', '.mark-as-read-button', function() {
   $(this).parent().toggleClass('read');
   countTotals();
   clearReadButtonToggle();

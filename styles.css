@@ -1,31 +1,18 @@
-
 body {
   font-family: 'Orbitron', sans-serif;
-  height: 600px;
   background: url('images/charcoal-backdrop.jpg') no-repeat center center fixed;
 }
 
 .title-container {
   margin: auto;
-  border-radius: 25%;
-  margin-top: 40px;
-  height: auto;
-  width: 380px;
   position: center;
-  background: white;
-  border: 1px solid black;
+  border-radius: 10%;
+  margin-top: 30px;
+  height: auto;
+  width: 600px;
   opacity: 0.8;
-  background-image: linear-gradient(white, black );
-
-
+  background-image: linear-gradient(white, black 65%);
 }
-/*
-header {
-  background-color: gray;
-  width: auto;
-  height: 60px;
-  border-bottom: 1px solid black;
-}*/
 
 h1  {
   height: 60px;
@@ -35,48 +22,58 @@ h1  {
   font-size: 2em;
 }
 
-img {
+#bomb-image {
   width: 30px;
   height: 30px;
 }
 
-
-#add-link-button {
-  background-color: darkred;
-  /*background-image: linear-gradient(darkred 80%, grey);*/
-  border: none;
-  color: white;
-  text-decoration: none;
-  /*display: inline-block;*/
-  height: 25px;
-  width: 75px;
-  border-radius: 2px;
-  /*border: 1px solid black;*/
-  cursor: pointer;
-  box-shadow: 0 2px black;
-  font-family: 'Orbitron', sans-serif;
-  display: block;
-  position: center;
-  margin: auto;
-  margin-bottom: 30px;
-  margin-top: 20px;
+.add-link-form {
+  text-align:center;
 }
-
-#add-link-button:hover {
-  padding: 5px;
-  background-color: black;
-}
-
+__________________________________
 #add-link-button:disabled {
   cursor: not-allowed;
-  color: lightgray;
+  color: black;
   background: grey;
 }
 
+#add-link-button {
+  background-color: darkred;
+  border: none;
+  text-decoration: none;
+  font-family: 'Orbitron', sans-serif;
+  color: white;
+  padding: 8px 8px 4px 8px;
+  border-radius: 2px;
+  cursor: pointer;
+  box-shadow: 0 2px black;
+  display: block;
+  position: center;
+  margin: auto;
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+
+#add-link-button:hover {
+  background-color: black;
+  color: white;
+  transform: translateY(1px);
+}
+
 #add-link-button:active {
-  background-color: gray;
-  box-shadow: 0 0px #666;
-  transform: translateY(2px);
+  background-color: cyan;
+  box-shadow: #666;
+  color: black;
+  transform: translateY(1px);
+}
+
+_____________
+
+hr {
+  width:300px;
+  box-shadow: 0 0 10px 1px black;
+  height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
 
 .linked-list li {
@@ -87,23 +84,31 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  /*margin-top: 30px;*/
 }
 
 .linked-list li a {
   text-decoration: none;
-  color: black;
+  color: yellow;
   padding-right: 10px;
-  /*padding-top: 10px;*/
 }
 
 .linked-list button {
   background: white;
-  /*size: 2em;*/
+}
+______________________________
+
+.count-totals {
+  position: center;
+  margin-left: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#total-links {
+  margin-top: 20px;
 }
 
 h3, p {
-  /*display: inline-block;*/
   display: flex;
   align-items: center;
   justify-content: center;
@@ -114,14 +119,12 @@ h3 {
   height: 25px;
   margin-left: 30px;
   padding-top: 5px;
-  color: black;
+  color: white;
   margin: auto;
   position: center;
   width: 125px;
   display: flex;
-  align-items: center;
-  /*margin: 50px 0 20px 10px;*/
-
+  justify-content: center;
 }
 
 p {
@@ -132,60 +135,102 @@ p {
   display: flex;
   align-items: center;
 }
+________________________________
+.new-url-link {
+  float: left;
+}
 
-_______________
-#linked-list button {
-  background-color: darkred;
-  /*background-image: linear-gradient(darkred 80%, grey);*/
+.mark-as-read-button {
   border: none;
-  color: white;
   text-decoration: none;
-  /*display: inline-block;*/
-  height: 25px;
-  width: 75px;
+  font-family: 'Orbitron', sans-serif;
+  color: black;
+  padding: 8px 8px 4px 8px;
   border-radius: 2px;
-  /*border: 1px solid black;*/
   cursor: pointer;
   box-shadow: 0 2px black;
-  font-family: 'Orbitron', sans-serif;
-  display: block;
-  position: center;
-  margin: auto;
-  margin-bottom: 30px;
-  margin-top: 20px;
+  margin: 0 10px;
 }
 
-#linked-list button:hover {
-  padding: 5px;
+.mark-as-read-button:hover {
   background-color: black;
+  color: white;
+  transform: translateY(1px);
 }
 
-#linked-list button:disabled {
-  cursor: not-allowed;
-  color: lightgray;
-  background: grey;
+.mark-as-read-button:active {
+  background-color: orange;
+  box-shadow: #666;
+  color: black;
+  transform: translateY(1px);
 }
 
-#linked-list button:active {
-  background-color: gray;
-  box-shadow: 0 0px #666;
-  transform: translateY(2px);
+.remove-link-button {
+  border: none;
+  text-decoration: none;
+  font-family: 'Orbitron', sans-serif;
+  color: black;
+  padding: 8px 8px 4px 8px;
+  border-radius: 2px;
+  cursor: pointer;
+  box-shadow: 0 2px black;
+  margin: 0 10px;
 }
-_____________
-.count-totals {
-  position: center;
-  margin-left: auto;
-  margin-top: 20px;
 
+.remove-link-button:hover {
+  background-color: black;
+  color: white;
+  transform: translateY(1px);
+}
+
+.remove-link-button:active {
+  background-color: red;
+  box-shadow: #666;
+  color: black;
+  transform: translateY(1px);
+}
+__________________________________
+
+.clear-read-links {
+  text-align:center;
+  padding: 20px 0;
+  margin-bottom: 20px;
 }
 
 #clear-read-links-button {
+  background-color: darkred;
+  border: none;
+  text-decoration: none;
+  font-family: 'Orbitron', sans-serif;
+  color: white;
+  padding: 8px 8px 4px 8px;
+  border-radius: 2px;
+  cursor: pointer;
+  box-shadow: 0 2px black;
+  display: block;
+  position: center;
+  margin: auto;
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
 
-  /*margin: 20px 0;
-  /*padding: 20px;*/*/
-  display: flex;
-  align-items: center;
-  justify-content: center;
+#clear-read-links-button:disabled {
+  cursor: not-allowed;
+  color: black;
+  background: grey;
+}
+
+#clear-read-links-button:hover {
+  background-color: black;
+  color: white;
+  transform: translateY(1px);
+}
+
+#clear-read-links-button:active {
+  background-color: cyan;
+  box-shadow: #666;
+  color: black;
+  transform: translateY(1px);
 }
 
 span {
